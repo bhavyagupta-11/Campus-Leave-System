@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Leave Tracker</title>
+    
+        <style>
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+.header_logo{
+    width: 40px;
+    height: 30%;
+    object-fit: contain;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    margin-left: 45%;
+    padding: 10px;
+    float: right;
+  }
+  
+  li {
+    float: left;
+    color: white;
+    font-weight: 800;
+    padding: 60px;
+    
+  }
+  a{
+    color: white;
+  }
+
+
+
+.home{
+    margin: 0;
+}
+.home_title{
+    font-weight: bolder;
+    font-size: xx-large;
+    text-shadow: 2px 2px 4px #450e0e;
+    margin-left: 30%;
+    margin-top: 5%;
+    width: 50%;
+}
+.home_info{
+    width: 50%;
+    height: 50%;
+    margin-left: 22%;
+    margin-top: 8%;
+    font-weight: 500;
+    margin-bottom: 7%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+    background-color: rgb(201, 241, 228);
+    padding: 60px;
+    box-shadow: 4px 4px rgb(206, 239, 209)  ;
+}
+
+.footer{
+    height: 25%;
+   align-items: center;
+   background-color: rgb(85, 134, 238);
+   position: absolute;
+   width: 100%;
+}
+.footer_address{
+    float: left;
+    width: 35%;
+    margin-left: 10px;
+    margin-top: 20px;
+    padding-left: 210px;
+    font-size: larger;
+    
+}
+.footer_contact{
+    float:right;
+    width: 35%;
+    margin-top: 20px;
+    font-size: larger;
+}
+.footer_title{
+    font-size: larger;
+    font-weight: 500;
+}
+.footer_text{
+    font-size: medium;
+}
+
+        </style>
+    
+    </head>
+
+    <body>
+
+        <div class="header">
+    
+            <a href="/home" class="header_logo">
+                <i class="fas fa-lock"></i>
+            </a>
+
+            <ul>
+            <li><a href="/aboutus">ABOUT US</a></li>
+             <li><a href="/registar">REGISTAR</a></li>
+             <li><a href="/login">LOGIN</a></li>
+            </ul>
+
+        </div>
+
+        <div class="home">
+
+            <div class="home_container">
+                <div class="home_title">
+                  LEAVE TRACKING APPLICATION
+                </div>
+            </div>
+            <div class="home_info">
+            The Leave Tracking Application provides an interface for both students and wardens to track their leave applications. A big institute like IIT Indore has many students, who are studying in the institute. Thus, the objective is to build a secure system through which the entire system can be managed in an efficient manner.
+            </div>
+
+           
+
+        </div>
+
+        <div class="footer">
+          
+            <div class="footer_address">
+               <b class="footer_title">ADDRESS</b>  <br/>
+                <div class="footer_text">
+                The Institute is located at Simrol,Indore,Madhya Pradesh. <br/>
+                Pin Code: 2000100
+                </div>
+            </div>
+  
+            <div class="footer_contact">
+                <b class="footer_title">CONTACT </b><br/>
+               <div class="footer_text">
+               Mob No. 8930119629 <br/>
+               <a href=": https://www.linkedin.com/in/bhavya-gupta-94516b219/">Linked In</a>
+                </div>
+            </div>
+          </div>
+      
+
+    </body>
+</html>

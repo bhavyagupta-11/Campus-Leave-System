@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Leave Tracker</title>
+
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+.header_logo{
+    width: 40px;
+    height: 30%;
+    object-fit: contain;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    margin-left: 45%;
+    padding: 10px;
+    float: right;
+  }
+  
+  li {
+    float: left;
+    color: white;
+    font-weight: 800;
+    padding: 60px;
+    
+  }
+  a{
+    color: white;
+  }
+
+.person_heading {
+  font-size: xx-large;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight:800 ;
+  margin-left: 40%;
+  width: 50%;
+}
+.person_image{
+  float: left;
+  margin-left: 22%;
+  width: 15%;
+  height: 15%;
+  margin-top: 3%;
+}
+.person_details{
+ background-color: aquamarine;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ font-weight: 400;
+ font-size: large;
+ padding: 1.5%;
+ padding-top: 1%;
+ width: 25%;
+ margin-top: 5%;
+ margin-left: 50%;
+ height: 150px;
+ box-shadow: 2px 2px rgb(160, 222, 160);
+}
+.person_button{
+ width: 70%;
+ margin-left: 10%;
+ margin-top: 2%;
+ background-color: rgb(44, 44, 18);
+ padding: 0.5%;
+ color: black;
+}
+.person_leaves_heading{
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:800 ;
+    margin-left: 40%;
+    margin-top: 2%;
+}
+.table{
+margin-left: 21%;
+margin-bottom: 2%;
+margin-top: 1%;
+border: 2px solid;
+width: 50%;
+}
+.thead{
+height: 40px;
+background-color: rgb(210, 231, 210);
+}
+.tr{
+text-align: center;
+padding-left: 10px;
+height: 30px;
+}
+
+
+.footer{
+    height: 25%;
+   align-items: center;
+   background-color: rgb(85, 134, 238);
+   position: absolute;
+   width: 100%;
+}
+.footer_address{
+    float: left;
+    width: 35%;
+    margin-left: 10px;
+    margin-top: 20px;
+    padding-left: 210px;
+    font-size: larger;
+    
+}
+.footer_contact{
+    float:right;
+    width: 35%;
+    margin-top: 20px;
+    font-size: larger;
+}
+.footer_title{
+    font-size: larger;
+    font-weight: 500;
+}
+.footer_text{
+    font-size: medium;
+}
+</style>
+
+        
+    </head>
+
+    <body>
+
+        <div class="header">
+    
+            <a href="/home" class="header_logo">
+                <i class="fas fa-lock"></i>
+            </a>
+
+            <ul>
+            <li><a href="/aboutus">ABOUT US</a></li>
+             <li><a href="/registar">REGISTAR</a></li>
+             <li><a href="/login">LOGOUT</a></li>
+            </ul>
+
+        </div>
+
+        <div class="person">
+            <h1 class="person_heading">STUDENT</h1>
+          <img src="<%=picture%>" class="person_image"/>
+          <div class="person_details">
+              <br/><br/>
+             NAME  : <%=name%> <br/>
+             DEPARTMENT : <%=department%> <br/>
+             USERNAME : <%=username%> <br/>
+             </div>
+            <button type="submit" class="person_button"><a href="/leaveform">APPLY LEAVES</a></button>
+          
+   
+          <h3 class="person_leaves_heading">Leave Details</h3>
+   
+          <div class="person_leaves">
+            <table class="table">
+                <thead class="thead">
+                    <th>LEAVE FROM</th>
+                    <th>LEAVE TO</th>
+                    <th>REASON</th>
+                    <th>STATUS</th>
+                    <th>COMMENTS</th>
+                </thead>
+                 
+                <% records.forEach(function(row){%>
+                <tr class="tr">
+                    <td><%=row.from%></td>
+                    <td><%=row.to%></td>
+                    <td><%=row.reason%></td>
+                    <td><%=row.status%></td>
+                    <td><%=row.comments%></td>
+                </tr>
+                <% }) %>
+              </table>
+          </div>
+   
+        </div>
+
+        <div class="footer">
+          
+            <div class="footer_address">
+               <b class="footer_title">ADDRESS</b>  <br/>
+                <div class="footer_text">
+                The Institute is located at Simrol,Indore,Madhya Pradesh. <br/>
+                Pin Code: 2000100
+                </div>
+            </div>
+  
+            <div class="footer_contact">
+                <b class="footer_title">CONTACT </b><br/>
+               <div class="footer_text">
+               Mob No. 8930119629 <br/>
+               <a href=": https://www.linkedin.com/in/bhavya-gupta-94516b219/">Linked In</a>
+                </div>
+            </div>
+          </div>
+      
+
+    </body>
+</html>
